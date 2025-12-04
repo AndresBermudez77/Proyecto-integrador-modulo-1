@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="styles_pokemon.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Pokédex</h1>
+      <form id="search-form" class="search">
+        <input
+          id="search-input"
+          type="text"
+          placeholder="Busca por nombre o número (ej. pikachu o 25)"
+          aria-label="Buscar Pokémon"
+        />
+        <button type="submit">Buscar</button>
+        <button type="button" id="clear-btn" class="secondary">Limpiar</button>
+      </form>
+      <button id="theme-toggle" class="theme-btn">🌙 Oscuro</button>
+    </header>
+
+    <main class="container">
+      <section class="controls">
+        <div class="pager">
+          <button id="prev-btn" disabled>← Anterior</button>
+          <span id="page-info">Página 1</span>
+          <button id="next-btn">Siguiente →</button>
+        </div>
+        <label class="page-size">
+          Tamaño de página:
+          <select id="limit-select">
+            <option value="12">12</option>
+            <option value="24" selected>24</option>
+            <option value="48">48</option>
+          </select>
+        </label>
+      </section>
+
+      <section id="grid" class="grid" aria-live="polite"></section>
+
+      <section id="details" class="details hidden" aria-live="polite">
+        <button id="close-details" class="close">✕</button>
+        <div id="details-content"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <small>Datos de PokeAPI · Proyecto de ejemplo</small>
+    </footer>
+
+    <script src="scrip_pokemon.js"></script>
+  </body>
+</html>

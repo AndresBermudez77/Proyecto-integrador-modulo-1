@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Rick & Morty App</title>
+    <link rel="stylesheet" href="styles_RYM.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Rick & Morty Characters</h1>
+      <form id="search-form" class="search">
+        <input id="search-input" type="text" placeholder="Buscar personaje..." />
+        <button type="submit">Buscar</button>
+        <button type="button" id="clear-btn" class="secondary">Limpiar</button>
+      </form>
+      <button id="theme-toggle" class="theme-btn">🌙 Oscuro</button>
+    </header>
+
+    <main class="container">
+      <section id="grid" class="grid" aria-live="polite"></section>
+      <div id="status" class="status"></div>
+    </main>
+
+    <footer class="footer">
+      <small>Datos de <a href="https://rickandmortyapi.com/" target="_blank">Rick and Morty API</a></small>
+    </footer>
+
+    <script src="scrip_RYM.js"></script>
+  </body>
+</html>
